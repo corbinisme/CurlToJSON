@@ -2,11 +2,62 @@
 <head>
 	<link href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" 
 	rel="stylesheet" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-	<script
+	  
+	  <script
   src="https://code.jquery.com/jquery-2.2.4.min.js"
   integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44="
   crossorigin="anonymous"></script>
   <script>
+ var listCounter = 0;
+ var list = [];
+  function downloadAll(){
+
+  	var current = 0;
+  	
+  	$(".linksbyfifty li").each(function(){
+  		var url = $(this).find("a").attr("href");
+  		list.push(url);
+  		//console.log(url)
+
+  	});
+
+  	ajaxDownload()
+  	//ajaxDownload(list[0]);
+  }
+
+function downloadYear(){
+	var year = $("#year").val();
+	var era = $("#era").val();
+	var url = "index.php?year="  +year + "&era=" + era;
+	$.ajax({
+		url: url
+	}).done(function(data){
+		console.log(data);
+		alert("downloaded")
+	})
+}
+ 
+  function ajaxDownload(){
+  	var url = list[listCounter];
+  	$(".linksbyfifty li a[href='" + url + "']").addClass("btn btn-default").append("<span class='loader'></span>");
+
+  	$.ajax({
+  		url: url,
+  	}).done(function(data){
+  		//console.log($(data).find(".container").html());
+  		console.log(url + " done");
+  		$(".linksbyfifty li a[href='" + url + "']").addClass("disabled").find("span").remove();
+
+  		listCounter++;
+  		// just setting to the first two for now
+  		if(listCounter==1){
+  			ajaxDownload();
+  		}
+  	});
+
+	
+	console.log("ajaxing "+url)
+  }
  var counter = 0;
  var masterList = [];
   $("#listAll span").each(function(){
@@ -30,6 +81,26 @@
   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" 
   integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" 
   crossorigin="anonymous"></script>
+  <style>
+.loader {
+  border: 16px solid #f3f3f3; /* Light grey */
+  border-top: 16px solid #3498db; /* Blue */
+  border-radius: 50%;
+  width: 20px;
+  height: 20px;
+  display: inline-block;
+  position: relative;
+  top: 8px;
+  left: 5px;
+  animation: spin 2s linear infinite;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+  </style>
 </head>
 <body>
 <header>
@@ -39,6 +110,7 @@
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
   </button>
+  <!--
   <div class="collapse navbar-collapse" id="navbarNav">
     <ul class="navbar-nav">
        <li class="nav-item active">
@@ -55,6 +127,7 @@
       </li>
     </ul>
   </div>
+-->
 </nav>
 
 </header>
@@ -156,6 +229,7 @@ if(isset($_REQUEST['year']) && isset($_REQUEST['era'])) {
 				<div class="col-sm-6">
 		<?php
 		echo "<h1>Download by sets of 50</h1>";
+		echo "<a href='javascript:downloadAll();' class='btn btn-primary'>Download All (long process)</a><hr />";
 		$maxCounter = 0;
 
 		$counter = 0;
@@ -216,14 +290,14 @@ if(isset($_REQUEST['year']) && isset($_REQUEST['era'])) {
 				<label>Year</label>
 				<input type="text" id="year" name="year"  class="form-control"/>
 				<label>Era</label>
-				<select class="form-control" name="era">
+				<select class="form-control" name="era" id="era">
 					<option value="AD">AD</option>
 					<option value="BC">BC</option>
 				</select>
 				<br />
-				<button class="btn btn-primary">
+				<a class="btn btn-primary" href="javascript:downloadYear()">
 					Download
-				</button>
+				</a>
 				
 			</div>
 		</div>
