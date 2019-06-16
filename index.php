@@ -48,13 +48,13 @@ function getCalendarByYear($year, $era){
 	fwrite($fp, json_encode($output));
 	fclose($fp);
 
-	$fw = fopen('output/'. $era . $year .'html', 'w');
+	$fw = fopen('output/'. $era . $year .'.html', 'w');
 	fwrite($fw, json_decode($output));
 	fclose($fw);
 
 
 	echo 'writing output/' .$era . $year . '.json | ';
-	echo 'writing output/'. $era . $year .'html<br />';
+	echo 'writing output/'. $era . $year .'.html<br />';
 }
 
 
