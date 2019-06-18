@@ -4,6 +4,7 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
 <link rel="stylesheet" href="bootstrap/css/bootstrap.css" />
+<link rel="stylesheet" href="../generator_files/ResponsiveMAIN.css" />
 <title>Download · Bootstrap</title>
 
 </head>
@@ -11,7 +12,93 @@
 	
 	<div class="container-fluid">
 		
-		<div class="col-sm-12">
+		<div class="generateOptions">
+	<p>Enter a year, pick the era, and Generate a Holy Day Calendar.</p>
+	
+	</div>
+
+	<div class="generateOptionsInner">
+
+	<noscript><div>JavaScript is disabled on your browser. Without it, the calendar cannot generate</div></noscript>
+	<form id="EraForm" name="EraForm" method="NULL" action="#">
+		<a class="year" id="up" onclick="IncrementYear()">▲</a>
+		<input type="text" id="Year" placeholder="Enter a Year">
+		<a class="year" id="down" onclick="DecrementYear()">▼</a>
+		<span class="clear"></span>
+		<input type="hidden" id="Era" name="Era" value="">
+		<span class="buttonWrap">
+			<button type="button" class="adOff" id="EraAD" onclick="SetAD();">AD</button>
+			<button type="button" class="bcOff" id="EraBC" onclick="SetBC();">BC</button>
+		</span>
+		<span class="clear"></span>
+	</form>
+	<script type="text/javascript">
+
+		function StartCalendar(){
+			var res = $("#Era").val() + $("#Year").val();
+		//alert(res);
+			var url = "../output/"+res+".html";
+			$("#loadCal").attr("src", url);
+		}
+		function ge(ElementName) { return document.getElementById(ElementName); }
+
+		var ButtonBC = ge("EraBC");
+		var ButtonAD = ge("EraAD");
+		var ValueEra = ge("Era");
+		var ValueYear = ge("Year");
+
+		function SetAD() {
+			ValueEra.value = "AD";
+			$(ButtonAD).removeClass("adOff").addClass("adOn");
+			$(ButtonBC).removeClass("bcOn").addClass("bcOff");
+		}
+
+		function SetBC() {
+			ValueEra.value = "BC";
+			$(ButtonAD).removeClass("adOn").addClass("adOff");
+			$(ButtonBC).removeClass("bcOff").addClass("bcOn");
+        }
+
+        function IncrementYear() {
+            if (ValueYear.value == null || ValueYear.value == "") {
+                ValueYear.value = 0;
+                SetAD();
+            }
+            if (ValueEra.value == "AD") {
+                ValueYear.value++;
+            }
+            else {
+                ValueYear.value--;
+            }
+            if (ValueYear.value <= 0) {
+                ValueYear.value = 1;
+                SetAD();
+            }
+            StartCalendar()
+        }
+        function DecrementYear() {
+            if (ValueYear.value == null || ValueYear.value == "") {
+                ValueYear.value = 0;
+                SetBC();
+            }
+            if (ValueEra.value == "AD") {
+                ValueYear.value--;
+            }
+            else {
+                ValueYear.value++;
+            }
+            if (ValueYear.value <= 0) {
+                ValueYear.value = 1;
+                SetBC();
+            }
+            StartCalendar()
+        }
+	</script>
+
+
+	<button id="CalcButton" onClick="StartCalendar()">Generate</button>
+</div>
+		<!--<div class="col-sm-12">
 				
 				<div class="row">
 					<div class="col-sm-4">
@@ -32,6 +119,7 @@
 				</a>
 			</div>
 			</div>
+		-->
 				
 			</div>
 			<iframe id="loadCal" frameborder="0" style="width:100%; height: 600px; border: 0"></iframe>
