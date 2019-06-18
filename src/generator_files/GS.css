@@ -1,0 +1,17 @@
+.gsVideo.gsHome {height: 278px;left: 330px;position: absolute;top: 149px;width: 236px;z-index: 200;}
+#placeholderImg {height: 278px;left: 460px;position: absolute;top: 179px;width: 236px;z-index: 200;}
+#placeholderImg:hover {cursor:pointer;}
+
+.gsVideo.gsHome {height: 278px;left: 330px;position: absolute;top: 149px;width: 236px;z-index: 200;}
+
+@media screen and (max-width:1000px){.gsVideo.gsHome {left: 100px;top: 293px;}}
+ @media screen and (max-width:500px){.gsVideo.gsHome {left: 50px;top:303px}}
+       
+
+.seeThru-display {display: block;position: relative;z-index: 200;}
+
+
+.CloseVideoButton {border: 1px solid #4598ce;border-radius: 5px;bottom: 0;box-shadow: 0 3px 5px 1px rgba(0, 0, 0, 0.43);display: none;font-size: 16px;left: -30px;line-height: 40px;margin: 0 18%;position: absolute;text-align: center;text-transform: uppercase;transition: all 0.3s ease 0s;width: 200px;z-index: 1000;}
+
+.gsVideo:hover .CloseVideoButton:hover {background:#000; transition: all 0.3s ease;}
+.gsVideo:hover .CloseVideoButton, .gsVideo:active .CloseVideoButton {cursor: pointer; display: block; color: #fff; background: #252525;}

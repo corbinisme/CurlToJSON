@@ -1,0 +1,251 @@
+﻿
+.simply-scroll, #copyright, #quoteBlock, #clickContent, #biblevideos { display: none; }
+
+.clear { clear: both; }
+
+#headerBG { display: none; }
+
+#footerWrap { width: 1000px; height: 100px; margin: 10px auto 0; }
+#footerWrap ul { list-style: none; margin: 0; padding: 0; width: 1000px; text-align: center; }
+#footerWrap li { display: inline-block; }
+#footerWrap a { font-family: Futura, "Trebuchet MS" , Arial, sans-serif; text-transform: uppercase; text-decoration: none; color: #000; font-size: 14px; line-height: 18px; }
+#footerWrap .research, #footerWrap .faq, #footerWrap .moreInfo, #footerWrap .about, #footerWrap .online { margin: 0 10px; }
+#footerWrap .home { margin: 0 10px 0 0; }
+#footerWrap .contact { margin: 0 0 0 10px; }
+#footerLogo { width: 221px; height: 31px; vertical-align: middle; }
+
+#StyleButtons { width: 300px; height: 30px; margin: 10px auto; }
+#StyleButtons input { display: block; height: 26px; width: 48%; border: 1px solid #000; background: #E0C796; border-radius: 5px; }
+#StyleButtons #Normal { float: left; }
+#StyleButtons #HighContrast { float: right; }
+#StyleButtons #HighContrast { background: #2B60A4; color: #fff; }
+
+
+#CalendarPage .SignificantDateV2 {background:none; clear:both; opacity:1; padding:0; text-decoration:none; margin:0;}
+#CalendarPage .SignificantDateV2 a {text-decoration:none; font-size: 24px; font-family: "Century Gothic", CenturyGothic, AppleGothic, sans-serif; text-align:center; color:#FFF; background:#1F1F1F; border-color:#1F1F1F; display:block; width:100%; transition:all 0.2s ease; padding:15px 0; border-radius:15px;}
+#CalendarPage .SignificantDateV2 a:hover {background:#FFFABA; transition:all 0.2s ease; color:#000;}
+
+
+/* Calendar
+-----------------------------------------------------------
+*/
+
+#CalendarPage { background: #fff; }
+#CalendarPage #headerBG { background: none; }
+#CalendarPage #timelineNoFlash { display: none !important; }
+#CalendarPage #contentWrap { margin: 0 auto 70px; min-height: 570px; }
+#CalendarPage #viewOnlineSmall { display: none; }
+
+#CalendarPage #contentWrap h1 { font-family: "Century Gothic" , CenturyGothic, AppleGothic, sans-serif; text-align: center; text-transform: uppercase; color: #2B60A4; top: 0; font-size: 48px; line-height: 84px; letter-spacing: 4px; border-top: 1px solid #2B60A4; border-bottom: 1px solid #2B60A4; margin-bottom: 20px; }
+
+.generateOptions { display: block; width: 500px; margin: 0 auto; }
+
+.generateOptions p { font-size: 20px; text-transform: capitalize; font-style: italic; text-align: center; letter-spacing: 1.5px; margin: 10px 0 20px; font-family: "Century Gothic" , CenturyGothic, AppleGothic, sans-serif; color: #2B60A4; }
+
+.generateOptionsInner { width: 425px; display: block; margin: 0 auto; font-family: inherit; font-family: "Century Gothic" , CenturyGothic, AppleGothic, sans-serif; }
+
+.generateOptionsInner .clear { display: block; clear: both; }
+
+.generateOptionsInner input[type="text"] { width: 278px; border-radius: 20px; border: 1px solid #030303; box-shadow: 1px 3px 5px #444 inset; padding: 0 10px; text-align: center; background: #97b1d2; font-size: 30px; color: #fff; font-family: inherit; float: left; }
+
+.generateOptionsInner form { width: auto; /* 298px; */ padding: 0; text-align: center; }
+
+.generateOptionsInner .year { display: block; float: left; font-size: 40px; line-height: 40px; color: #97B1D2; cursor: pointer; padding: 0 10px; }
+.generateOptionsInner .year:hover, .generateOptionsInner .year:active { color: #e0c796; }
+
+.generateOptionsInner .buttonWrap { margin: 0 auto; width: 298px; display: block; }
+
+.generateOptionsInner form .adOff { margin: 10px 0; padding: 0 10px; width: 149px; background: #6297DB; font-size: 24px; color: #fff; float: left; border-radius: 20px 0 0 20px; box-shadow: 1px 3px 5px #444 inset; border: 1px solid #030303; border-right: none; }
+
+.generateOptionsInner form .bcOff { margin: 10px 0; padding: 0 10px; width: 149px; background: #6297DB; font-size: 24px; color: #fff; float: right; border-radius: 0 20px 20px 0; box-shadow: 1px 3px 5px #444 inset; border: 1px solid #030303; border-left: none; }
+
+.generateOptionsInner form .adOn { margin: 10px 0; padding: 0 10px; width: 149px; background: #2B60A4; font-size: 24px; color: #fff; float: left; border-radius: 20px 0 0 20px; box-shadow: none; border: 1px solid #2B60A4; border-right: none; }
+
+.generateOptionsInner form .bcOn { margin: 10px 0; padding: 0 10px; width: 149px; background: #2B60A4; font-size: 24px; color: #fff; float: right; border-radius: 0 20px 20px 0; box-shadow: none; border: 1px solid #2B60A4; border-left: none; }
+
+.generateOptionsInner #CalcButton { display: block; margin: 30px auto; padding: 2px 10px; width: 200px; background: #2B60A4; font-size: 24px; color: #fff; border-radius: 20px; box-shadow: none; border: 1px solid #2B60A4; border-right: none; text-transform: uppercase; }
+
+#CalendarPage #md-maincontent { border-top: 1px solid #2B60A4; }
+
+.detailText { width: 600px; text-align: center; display: block; margin: 0 auto;  }
+.detailText p {font-family: "Century Gothic" , CenturyGothic, AppleGothic, sans-serif; font-size: 14px; line-height: 18px;}
+
+/*High Sabbaths
+-----------------------------------------------------------
+*/
+
+.Chart { width: 50%; float: left; }
+.HighSabbath .Row { width: 100%; float: left; }
+.HighSabbath .Title { width: 40%; float: left; }
+.HighSabbath .StartDate { width: 30%; float: left; }
+.HighSabbath .EndDate { width: 30%; float: left; }
+
+
+#md-maincontent .HighSabbath.Chart { width: 600px; display: block; margin: 10px auto 0; float: none; font-family: "Century Gothic" , CenturyGothic, AppleGothic, sans-serif; font-style: italic; font-size: 20px; color: #2B60A4; border-bottom: 1px solid #fff; }
+
+#md-maincontent .Chart .Disclaimer { width: 100%; }
+#md-maincontent .Disclaimer { display: inline-block; width: 70%; font-size: 20px; line-height: 30px; text-transform: uppercase; text-align: center; color: #004da9; padding: 15px 0 20px; font-family: "Century Gothic" ,CenturyGothic,AppleGothic,sans-serif; font-weight: bold; font-style: italic; }
+#md-maincontent .ArrowCenter { display: inline-block; width: 15%; text-align: center; text-transform: uppercase; font-family: "Century Gothic" , CenturyGothic, AppleGothic, sans-serif; background: #fffaba; padding: 10px 0; border-radius: 15px; transition: all 0.3s ease; }
+#md-maincontent .ArrowCenter:hover, #md-maincontent .ArrowCenter:active { background: #000; color: #fffaba; transition: all 0.3s ease; cursor: pointer; }
+
+/* .Disclaimer {font-size: 14px; line-height: 30px; text-transform: uppercase; text-align: center; color: #004da9; padding: 0 0 20px; font-family: "Century Gothic", CenturyGothic, AppleGothic, sans-serif;}
+*/
+
+/* CALENDAR
+========================================================================= */
+.container { width: 100%; display: block; position: relative; margin: 30px 0 0; }
+.Header { width: 100%; text-align: center; float: left; }
+.Row { width: 100%; float: left; }
+.Column { width: 4.9%; float: left; border-right: 1px solid #000; margin: 0 0 10px; }
+.Cell { width: 100%; float: left; }
+.GC { color: #fff; font-size: 18px; }
+.HCC { color: #fff; font-size: 18px; }
+.SC { color: #fff; font-size: 18px; }
+.Month { }
+
+.key { margin: 0px auto; }
+#DemoOfNextYear { width: 217px; display: block; margin: -4px auto 0; font-family: "Century Gothic" ,CenturyGothic,AppleGothic,sans-serif; padding: 10px 0; text-align: center; color: #202020; background: #FFFABA; border-radius: 0 0 20px 20px; }
+.key .GC { color: #fff; background: #1F1F1F; border-radius: 0 0 0 20px; }
+.key .HCC { color: #fff; background: #A50000; }
+.key .SC { color: #fff; background: #0000AA; border-radius: 0 0 20px 0; }
+.key .label { text-align: center; width: 33.3333333333%; padding: 10px 0; display: inline-block; font-family: "Century Gothic" ,CenturyGothic,AppleGothic,sans-serif; }
+
+#Math { display: block; width: 100%; }
+#Math .TotalDays, #Math .CalcDays, #Math .Calculated { display: block; float: left; width: 33.3333333333%; min-height: 70px; background: #2b60a4; }
+
+#Math .CalcDays { background: #053E84; }
+#Math .TotalDays { border-radius: 0 0 0 30px; }
+#Math .Calculated { border-radius: 0 0 30px 0; }
+#Math .TotalDays, #Math .CalcDays, #Math .Calculated { border-right: 1px solid #fff; width: 33.233%; height:150px; }
+#Math .Title, #Math .NumDays, #Math .NumCycles, #Math .NumYears { font-family: "Century Gothic" ,CenturyGothic,AppleGothic,sans-serif; font-weight: bold; float: left; color: #fff; }
+#Math .Title { padding: 8px 4% 0 0; text-align: right; width: 52%; }
+#Math .Title:after { content: ":"; }
+#Math .NumDays, #Math .NumCycles, #Math .NumYears { width: 40%; padding: 8px 0 0 0; }
+.SeeTheEnd { font-family: "Century Gothic" ,CenturyGothic,AppleGothic,sans-serif; text-align: center; font-weight: bold; float: left; width: 100%; padding: 8px 0; }
+.SeeTheEnd a { text-decoration: none; }
+
+#Math .NumDays:after { content: " days"; clear: both; }
+
+/*.container #FirstOfNextYear .Cell.HCC,
+.container #FirstOfNextYear .Cell.SC {background: #FFFABA; text-shadow: none; color: #202020;}*/
+
+.container .ShadowRight, .container .ShadowLeft { display: none; }
+
+.container .Header { font-family: "Century Gothic" , CenturyGothic, AppleGothic, sans-serif; font-size: 48px; font-weight: bold; letter-spacing: 3px; text-transform: uppercase; line-height: 60px; color: #2B60A4; margin: 0px 0 20px; float: left; text-shadow: none; }
+
+.container .Cell { font-family: "Century Gothic" , CenturyGothic, AppleGothic, sans-serif; font-style: italic; font-size: 20px; line-height: 30px; height: 30px; position: relative; text-align: center; font-weight: bold; text-shadow: 1px 1px 3px #000; }
+
+.container .Cell.GC { background: #1f1f1f; color: #fff; }
+.container .Cell.GC.first { background: #1f1f1f; }
+.container .Cell.GC.Month { background: transparent; color: #1f1f1f; text-align: left; text-shadow: none; }
+.container .Cell.GC.Month.first { text-align: center; }
+.container .Cell.GC.Month span { font-size: 18px; }
+
+.container .Cell.HCC { background: #a50000; color: #fff; }
+.container .Cell.HCC.first { background: #a50000; }
+.container .Cell.HCC.Month { background: transparent; color: #a50000; text-align: left; text-shadow: none; }
+.container .Cell.HCC.Month.first { text-align: center; }
+.container .Cell.HCC.Month span { font-size: 18px; }
+
+.container .Cell.SC { background: #0000aa; color: #fff; }
+.container .Cell.SC.first { background: #0000aa; }
+.container .Cell.SC.Month { background: transparent; color: #0000aa; text-align: left; text-shadow: none; }
+.container .Cell.SC.Month.first { text-align: center; }
+.container .Cell.SC.Month span { font-size: 18px; }
+
+
+
+
+.SeeTheEnd { font-family: "Century Gothic" ,CenturyGothic,AppleGothic,sans-serif; text-align: center; font-weight: bold; float: left; width: 100%; padding: 8px 0; }
+.SeeTheEnd a { text-decoration: none; color: #fffaba; }
+.SeeTheEnd a:hover, .SeeTheEnd a:active { color: #fff; }
+
+.Nope { display: block; width: 100%; padding: 20px 0; margin: 20px 0 0; text-align: center; color: #cc0000; font-size: 16px; font-family: "Century Gothic" ,CenturyGothic,AppleGothic,sans-serif; }
+
+.container .FirstOfTishri .Cell.HCC { background: #FFFABA; text-shadow: none; color: #202020; }
+
+.ArrowCenter { margin: 0 auto; }
+
+
+
+
+
+ @media screen and (max-width: 1000px){#headerBG { background: none; }}
+  @media screen and (max-width: 1000px){#headerWrap { width: 400px; }}
+  @media screen and (max-width: 600px){#headerWrap { width: 95%; text-align: center; }}
+  @media screen and (max-width: 1000px){#clickContent { margin-top: 35px;}}
+  @media screen and (max-width: 699px){#clickContent { margin-top: 90px;}}
+  @media screen and (max-width: 1000px){#pageWrap { width:95%; }}
+  @media screen and (max-width:1000px){#logo {float: left;height: 68px;margin: 10px 0 0;position: relative;width: 453px;}}
+  @media screen and (max-width:600px){#logo {float: none;height: 68px;margin: 10px 0 0 0; padding: 0; position: relative;}}
+  @media screen and (max-width:500px){#logo {width:97%; height: 40%;}}
+@media screen and (max-width: 600px){.topButtonsWrap{   margin: 0 auto;text-align: center; width: 450px; }}
+@media screen and (max-width: 500px){.topButtonsWrap{   margin: 0 auto;text-align: center; width: 350px; }}
+@media screen and (max-width: 400px){.topButtonsWrap{   margin: 0 auto;text-align: center; width: 300px; }}
+  @media screen and (max-width: 1000px){#topButtons { float:none; }}
+  @media screen and (max-width: 600px){#topButtons { width: 100%;}}
+  @media screen and (max-width: 600px){#freeDVD { width: 225px; background-size: 225px auto}}
+  @media screen and (max-width: 500px){#freeDVD { width: 175px; background-size: 175px auto}}
+  @media screen and (max-width: 400px){#freeDVD { width: 150px; background-size: 150px auto}}
+  @media screen and (max-width: 600px){#freeDVD:hover { width: 225px; background-size: 225px auto}}
+  @media screen and (max-width: 500px){#freeDVD:hover { width: 175px; background-size: 175px auto}}
+  @media screen and (max-width: 400px){#freeDVD:hover { width: 150px; background-size: 150px auto}}
+  @media screen and (max-width: 600px){#contact { float:left; width: 225px; background-size: 225px auto;}}
+  @media screen and (max-width: 500px){#contact { width: 175px; background-size: 175px auto}}
+  @media screen and (max-width: 400px){#contact { width: 150px; background-size: 150px auto}}
+  @media screen and (max-width: 600px){#contact:hover { float:left; width: 225px; background-size: 225px auto;}}
+  @media screen and (max-width: 500px){#contact:hover { width: 175px; background-size: 175px auto}}
+  @media screen and (max-width: 400px){#contact:hover { width: 150px; background-size: 150px auto}}
+  @media screen and (max-width: 1000px){#navWrap {float: left;height: 50px;left: -28px;margin: 0 auto;position: relative;width: 500px;z-index: 9000;}}
+  @media screen and (max-width: 699px){#navWrap {float: left;height: 50px;left: -28px;margin: 0 auto;position: relative;width: 320px;z-index: 9000;}}/*  Testing - Change Width for final */
+@media screen and (max-width: 1000px){#navWrap a#calendar {background: none;} #navWrap li.generator {background: rgba(0, 0, 0, 0) url("/Content/images/emphasisBG.gif") no-repeat scroll center top;}}
+  @media screen and (max-width: 1000px){.TestimonialButton {top: 610px;}}
+  @media screen and (max-width: 699px){.TestimonialButton {top: 610px;right: auto; width: 310px;left: 50%; margin: 0 -155px;}}
+  @media screen and (max-width: 699px){.TestimonialButton:hover, .TestimonialButton:active {background: rgba(0, 0, 0, 0) url("/Content/images/TestimonialByDwightBlevinsO.png") no-repeat scroll left center;}}
+  @media screen and (max-width: 420px){.TestimonialButton, .TestimonialButton:hover, .TestimonialButton:active {background-size: 300px auto !important;margin: 0 -150px !important;}}
+  @media screen and (max-width: 699px){#calendarButton {float: none; left:50%; margin: 0 -200px;}}
+  @media screen and (max-width: 420px){#calendarButton, #calendarButton:hover, #calendarButton:active {background-size: 300px auto !important;top: -50px;}}
+  @media screen and (max-width: 1000px){#contactDon {position:absolute;}}
+  @media screen and (max-width: 699px){#contactDon {position:relative;float: none; left:50%; margin: 0 -200px;}}
+  @media screen and (max-width: 420px){#contactDon, #contactDon:hover, #contactDon:active {background-size: 300px auto !important;top: -60px;}}
+  @media screen and (max-width: 1000px){#quoteBlock { float:none; left:0; width:95%;}}
+  @media screen and (max-width: 699px){#quoteBlock { float:none;position: relative; top:80px}}
+  @media screen and (max-width: 420px){#quoteBlock { top:60px}}
+  @media screen and (max-width: 1000px){#quoteBlock p { position: relative; top: 125px; width: 65%;}}
+  @media screen and (max-width: 699px){#quoteBlock p { width: 100% }}
+  @media screen and (max-width: 1000px){#quoteBlock #quote {width: 80%;}}
+  @media screen and (max-width: 699px){#quoteBlock #quote {width: 65%;}}
+  @media screen and (max-width: 1000px){#contentWrap {    width: 100%;}}
+  @media screen and (max-width: 1000px){#footerWrap { width: 100%;}}
+  @media screen and (max-width: 1000px){#footerWrap ul { margin: 0 auto; text-align: center; width: 560px;}}
+  @media screen and (max-width: 699px){#footerWrap ul {width: 100%;}}
+  @media screen and (max-width: 1000px){#copyright {   width: 100%; margin: 20px 0 5px;}}
+  @media screen and (max-width: 600px){#FAQs h1, #HebrewCalendar h1 {top: -60px}}
+  @media screen and (max-width: 1000px){#FAQs h2, #HebrewCalendar h2 { width: 55%;}}
+  @media screen and (max-width: 1000px){#viewBiblicalCalendarButton {position: absolute; top: -18px; right: 0pt; z-index: 1000;}}
+  @media screen and (max-width: 1000px){#CalendarPage #contentWrap h1 {font-size: 4vw;}}
+  @media screen and (max-width: 699px){#CalendarPage #contentWrap h1 {  font-size: 140%; line-height: 210%;}}
+  @media screen and (max-width: 699px){.generateOptions {  width:95%;}}
+  @media screen and (max-width: 699px){.generateOptions p {  font-size: 16px;}}
+  @media screen and (max-width: 699px){.generateOptionsInner  { width: 100%;}}
+  @media screen and (max-width: 699px){.generateOptionsInner input[type="text"] {width: 45%; float: none;}}
+  @media screen and (max-width: 699px){.generateOptionsInner .year {float: none; display: inline-block;}}
+  @media screen and (max-width: 699px){.detailText {width: 100%;}}
+  @media screen and (max-width: 699px){.HighSabbath .Title {width: 50%;}}
+  @media screen and (max-width: 699px){.HighSabbath .Title {width: 50%;}}
+  @media screen and (max-width: 699px){.HighSabbath .StartDate {width: 24%;}}
+  @media screen and (max-width: 699px){.HighSabbath .StartDate {width: 24%;}}
+  @media screen and (max-width: 699px){.HighSabbath .EndDate {width: 20%;}}
+  @media screen and (max-width: 699px){.HighSabbath .EndDate {width: 20%;}}
+  @media screen and (max-width: 699px){#md-maincontent .HighSabbath.Chart {width: 500px; font-size: 16px;}}
+  @media screen and (max-width: 500px){#md-maincontent .HighSabbath.Chart {width: 300px; font-size: 16px;}}
+  @media screen and (max-width: 1000px){.Column {width: 50px}}
+  @media screen and (max-width: 1000px){.Column {width: 50px}}
+  @media screen and (max-width: 650px){.key {display:inline-block;width:100%; margin-top: -4px;}}
+  @media screen and (max-width: 699px){.key .label {width: 33%; font-size: 17px; float: left;}}
+  @media screen and (max-width: 560px){.key .label {font-size: 14px; height: 40px; }}
+  @media screen and (max-width: 1000px){.container .Header {font-size: 35px; line-height: 40px;}}
+  @media screen and (max-width: 1000px){#Math .CalcDays {width: 33%; font-size: 10px;padding: 0;}}
+  @media screen and (max-width: 1000px){#Math .TotalDays {width: 33%; font-size: 10px;padding: 0;}}
+  @media screen and (max-width: 1000px){#Math .Calculated {width: 33%; font-size: 10px;padding: 0;}}
+  @media screen and (max-width: 1000px){#Math .Title {padding: 2px 1px 0 0;}}

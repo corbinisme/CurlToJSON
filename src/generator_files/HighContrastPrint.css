@@ -1,0 +1,127 @@
+﻿
+.simply-scroll, #copyright, #quoteBlock, #clickContent, #biblevideos { display: none; }
+
+#headerBG, #footerWrap ul { display: none; }
+
+#StyleButtons { display: none; }
+
+.container #FirstOfNextYear .Cell.HCC, .container #FirstOfNextYear .Cell.SC { border-left: 5px dotted #000; }
+
+/* Calendar
+-----------------------------------------------------------
+*/
+
+#CalendarPage { background: #fff; }
+#CalendarPage #headerBG { background: none; }
+#CalendarPage #timelineNoFlash { display: none !important; }
+#CalendarPage #contentWrap { margin: 0 0 70px; min-height: 570px; }
+#CalendarPage #viewOnlineSmall { display: none; }
+
+#CalendarPage #contentWrap h1 { font-family: "Century Gothic" , CenturyGothic, AppleGothic, sans-serif; text-align: center; text-transform: uppercase; color: #2B60A4; top: 0; font-size: 48px; line-height: 84px; letter-spacing: 4px; border-top: 1px solid #2B60A4; border-bottom: 1px solid #2B60A4; margin-bottom: 20px; }
+
+.generateOptions { display: none; width: 500px; margin: 0 auto; }
+
+.generateOptions p { font-size: 20px; text-transform: capitalize; font-style: italic; text-align: center; letter-spacing: 1.5px; margin: 10px 0 20px; font-family: "Century Gothic" , CenturyGothic, AppleGothic, sans-serif; color: #2B60A4; }
+
+.generateOptionsInner { width: 300px; display: none; margin: 0 auto; font-family: inherit; font-family: "Century Gothic" , CenturyGothic, AppleGothic, sans-serif; }
+
+.generateOptionsInner input[type="text"] { width: 278px; border-radius: 20px; border: 1px solid #030303; box-shadow: 1px 3px 5px #444 inset; padding: 0 10px; text-align: center; background: #2B60A4; font-size: 30px; color: #fff; font-family: inherit; }
+
+.generateOptionsInner form { width: 298px; padding: 0; text-align: center; }
+
+.generateOptionsInner form .adOff { margin: 10px 0; padding: 0 10px; width: 149px; background: #6297DB; font-size: 24px; color: #fff; float: left; border-radius: 20px 0 0 20px; box-shadow: 1px 3px 5px #444 inset; border: 1px solid #030303; border-right: none; }
+
+.generateOptionsInner form .bcOff { margin: 10px 0; padding: 0 10px; width: 149px; background: #6297DB; font-size: 24px; color: #fff; float: right; border-radius: 0 20px 20px 0; box-shadow: 1px 3px 5px #444 inset; border: 1px solid #030303; border-left: none; }
+
+.generateOptionsInner form .adOn { margin: 10px 0; padding: 0 10px; width: 149px; background: #2B60A4; font-size: 24px; color: #fff; float: left; border-radius: 20px 0 0 20px; box-shadow: none; border: 1px solid #2B60A4; border-right: none; }
+
+.generateOptionsInner form .bcOn { margin: 10px 0; padding: 0 10px; width: 149px; background: #2B60A4; font-size: 24px; color: #fff; float: right; border-radius: 0 20px 20px 0; box-shadow: none; border: 1px solid #2B60A4; border-left: none; }
+
+.generateOptionsInner #CalcButton { display: block; margin: 30px auto; padding: 2px 10px; width: 200px; background: #2B60A4; font-size: 24px; color: #fff; border-radius: 20px; box-shadow: none; border: 1px solid #2B60A4; border-right: none; text-transform: uppercase; }
+
+#CalendarPage #md-maincontent { border-top: 1px solid #2B60A4; }
+
+.detailText {display: none;}
+
+/*High Sabbaths
+-----------------------------------------------------------
+*/
+
+.Chart { width: 50%; float: left; }
+.HighSabbath .Row { width: 100%; float: left; }
+.HighSabbath .Title { width: 40%; float: left; }
+.HighSabbath .StartDate { width: 30%; float: left; }
+.HighSabbath .EndDate { width: 30%; float: left; }
+
+
+#md-maincontent .HighSabbath.Chart { width: 600px; display: block; margin: 10px auto 0; float: none; font-family: "Century Gothic" , CenturyGothic, AppleGothic, sans-serif; font-style: italic; font-size: 20px; color: #2B60A4; border-bottom: 1px solid #fff; text-shadow: none; }
+
+#md-maincontent .HighSabbath.Chart .Disclaimer { font-size: 14px; line-height: 30px; text-transform: uppercase; text-align: center; color: #004da9; padding: 15px 0 20px; }
+
+/* CALENDAR
+========================================================================= */
+.container { width: 100%; display: block; position: relative; margin: 30px 0 0; }
+.Header { width: 100%; text-align: center; float: left; }
+.Row { width: 100%; float: left; }
+.Column { width: 4.9%; float: left; border-right: 1px solid #000; margin: 0 0 10px; }
+.Cell { width: 100%; float: left; }
+.GC { color: #fff; font-size: 18px; }
+.HCC { color: #fff; font-size: 18px; }
+.SC { color: #fff; font-size: 18px; }
+.Month { }
+
+.key { width: 650px; margin: 0px auto; }
+
+#DemoOfNextYear { width: 217px; display: block; margin: 0 auto; font-family: "Century Gothic" ,CenturyGothic,AppleGothic,sans-serif; padding: 10px 0; text-align: center; color: #202020; border-left: 5px dotted #000; border-radius: 0; }
+
+.key .GC { color: #1F1F1F; border-top: 5px solid #1f1f1f; border-bottom: 5px solid #1f1f1f; background: transparent; border-radius: 0; }
+.key .HCC { color: #A50000; border-top: 5px groove #a50000; border-bottom: 5px groove #a50000; background: transparent; }
+.key .SC { color: #0000AA; border-top: 5px double #0000aa; border-bottom: 5px double #0000aa; background: transparent; border-radius: 0; }
+.key .label { text-align: center; width: 33.3333333333%; padding: 10px 0; display: inline-block; font-family: "Century Gothic" ,CenturyGothic,AppleGothic,sans-serif; }
+
+#FirstOfNextYear { background: #FFFABA; }
+.container #FirstOfNextYear .Cell.GC, .container #FirstOfNextYear .Cell.HCC, .container #FirstOfNextYear .Cell.SC { background: transparent; }
+
+.container #FirstOfNextYear .Cell { text-shadow: none; color: #202020; }
+
+.container .ShadowRight, .container .ShadowLeft { display: none; }
+
+.container .Header { font-family: "Century Gothic" , CenturyGothic, AppleGothic, sans-serif; font-size: 48px; font-weight: bold; letter-spacing: 3px; text-transform: uppercase; line-height: 60px; color: #2B60A4; margin: 0px 0 20px; float: left; text-shadow: none; }
+
+.container .Cell { font-family: "Century Gothic" , CenturyGothic, AppleGothic, sans-serif; font-style: italic; font-size: 20px; line-height: 30px; height: 30px; position: relative; text-align: center; font-weight: bold; text-shadow: none; }
+
+.container .Cell.GC { background: #fff; color: #1f1f1f; border-bottom: 5px solid #1f1f1f; }
+.container .Cell.GC.first { background: transparent; }
+.container .Cell.GC.Month { background: transparent; color: #1f1f1f; text-align: left; text-shadow: none; }
+.container .Cell.GC.Month.first { text-align: center; }
+.container .Cell.GC.Month span { font-size: 18px; }
+
+.container .Cell.HCC { background: #fff; color: #a50000; border-bottom: 5px groove #a50000; }
+.container .Cell.HCC.first { background: transparent; }
+.container .Cell.HCC.Month { background: transparent; color: #a50000; text-align: left; text-shadow: none; }
+.container .Cell.HCC.Month.first { text-align: center; }
+.container .Cell.HCC.Month span { font-size: 18px; }
+
+.container .Cell.SC { background: #fff; color: #0000aa; border-bottom: 5px double #0000aa; }
+.container .Cell.SC.first { background: transparent; }
+.container .Cell.SC.Month { background: transparent; color: #0000aa; text-align: left; text-shadow: none; }
+.container .Cell.SC.Month.first { text-align: center; }
+.container .Cell.SC.Month span { font-size: 18px; }
+
+#Math { display: block; width: 100%; }
+#Math .TotalDays, #Math .CalcDays, #Math .Calculated { display: block; float: left; width: 33.3333333333%; min-height: 70px; background: #2b60a4; }
+
+#Math .CalcDays { background: #053E84; }
+
+#Math .TotalDays { border-radius: 0 0 0 30px; }
+#Math .Calculated { border-radius: 0 0 30px 0; }
+
+#Math .TotalDays, #Math .CalcDays { border-right: 1px solid #fff; width: 33.233%; }
+
+#Math .Title, #Math .NumDays, #Math .NumCycles, #Math .NumYears { font-family: "Century Gothic" ,CenturyGothic,AppleGothic,sans-serif; font-weight: bold; float: left; color: #fff; }
+
+#Math .Title { padding: 8px 4% 0 0; text-align: right; width: 52%; }
+#Math .Title:after { content: ":"; }
+#Math .NumDays, #Math .NumCycles, #Math .NumYears { width: 40%; padding: 8px 0 0 0; }
+
+#Math .NumDays:after { content: " days"; clear: both; }

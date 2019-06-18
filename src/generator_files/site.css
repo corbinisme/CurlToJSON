@@ -1,0 +1,29 @@
+/* Styles for validation helpers
+-----------------------------------------------------------*/
+.field-validation-error		{color: #ff0000;}
+.field-validation-valid		{display: none;}
+.input-validation-error		{border: 1px solid #ff0000; background-color: #ffeeee;}
+.validation-summary-errors	{font-weight: bold; color: #ff0000;}
+.validation-summary-valid	{display: none;}
+
+
+/*styles for File Management*/
+#DeleteSelectedFiles	{background:none; border:0; color:#2B94FF; cursor:pointer;}
+ul.FileManLinks li		{display:inline;}
+ul.FileManLinks li a	{text-decoration:underline;}
+p.FileManCwd			{color:Gray; font-size:1.2em; text-align:center; }
+ul.FileManOps li		{display:inline;}
+ul.FileManip			{margin-left:150px;}
+ul.FileManip li		{display:inline; padding: 0px 3px 0px 3px;}
+#HelpOutput			{border:1px solid grey; margin-bottom:20px; color:#2B94FF;}
+#FileManipSelectAllFiles	{margin-left:100px; }
+
+
+/* Error Controller Styles */
+#HttpError	{color: #000; background-color: #ff0; font-weight: 900; border: thick solid red; padding: 0 15px; }
+
+
+/* Pagination */
+#PaginationDisplay			{}
+#PaginationDisplay a		{}
+#PaginationDisplay .selected	{}

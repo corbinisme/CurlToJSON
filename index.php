@@ -133,10 +133,31 @@ function downloadYear(){
 </header>
 <br />
 <?php 
+
+
 error_reporting(E_ALL);
 ini_set('display_errors', 1);
 function getCalendarByYear($year, $era){
 	$url = "http://www.biblicalcalendarproof.com/find/Json/JSONGetCalendarByYear?year={$year}&era={$era}";
+
+
+$htmlhead = '<html>
+<head>
+	<!--Requires site.css--><link rel="SHORTCUT ICON" href="../src/favIcon.ico">
+	<link rel="stylesheet" href="../src/generator_files/jquery.simplyscroll.css" media="all" type="text/css">
+	<link type="text/css" rel="stylesheet" href="../src/generator_files/ResponsiveMAIN.css" title="Normal">
+	<link type="text/css" rel="stylesheet" href="../src/generator_files/HighContrast.css" title="HighContrast">
+	<link type="text/css" rel="stylesheet" href="../src/generator_files/site.css">
+	<link type="text/css" rel="stylesheet" href="../src/generator_files/GS.css">
+	<link href="../src/generator_files/css" rel="stylesheet" type="text/css">
+</head>
+<body>
+	<div id="pageWrap">
+	<div id="md-maincontent">';
+	$htmlEnd = '</div>
+</div>
+</body>
+</html>';
 
 	$handle = curl_init();
 
@@ -149,12 +170,14 @@ function getCalendarByYear($year, $era){
 	 
 	curl_close($handle);
 
+	$htmlOutput = $htmlhead . "<br />" .  json_decode($output) . $htmlEnd;
+
 	$fp = fopen('output/' .$era . $year . '.json', 'w');
 	fwrite($fp, json_encode($output));
 	fclose($fp);
 
 	$fw = fopen('output/'. $era . $year .'.html', 'w');
-	fwrite($fw, json_decode($output));
+	fwrite($fw, $htmlOutput);
 	fclose($fw);
 
 
@@ -236,13 +259,13 @@ if(isset($_REQUEST['year']) && isset($_REQUEST['era'])) {
 		$fiftyCounter = 1;
 		$full = array();
 
-		$baseStart = -4000;
-		$baseEnd = 2020;
+		$baseStart = -4046;
+		$baseEnd = 2146;
 
 		$tot = $baseStart*-1 + $baseEnd;
 		$remain = $tot%50;
 
-		for($i=-4000;$i<2020;$i++){
+		for($i=$baseStart;$i<$baseEnd;$i++){
 			$era = "BC";
 			if($i>0){
 				$era = "AD";
