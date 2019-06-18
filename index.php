@@ -259,10 +259,8 @@ if(isset($_REQUEST['year']) && isset($_REQUEST['era'])) {
 		$fiftyCounter = 1;
 		$full = array();
 
-		$baseStart = 2043;
-		$baseEnd = 2146;
-		// and BC 0-10
-		// AD 0-4
+		$baseStart = -4046;
+		$baseEnd = 2046;
 
 		$tot = $baseStart*-1 + $baseEnd;
 		$remain = $tot%50;
