@@ -1,0 +1,281 @@
+<html>
+
+<head>
+
+</head>
+<body>
+
+<div id="contentWrap"><h1>
+	Hebrew Calendar Generator Tool - Christian Biblical to Gregorian
+</h1>
+
+
+<script type="text/javascript">
+       function FindFirstOfNisan() {
+           var a = document.getElementById("Nisan1");
+           var b = document.getElementById("Nisan2");
+           var c = document.getElementById("Nisan3");
+           var d = document.getElementById("Nisan4");
+           var e = document.getElementById("Nisan5");
+           var f = document.getElementById("Nisan6");
+           var g = document.getElementById("Nisan7");
+           var LowValue = 16;
+           var using = null;
+           var year = document.getElementById("AMYear").value;
+           if (a != null) {
+               var y = parseFloat(a.getAttribute("count"))
+               if (LowValue > y) { LowValue = y; using = a; }
+           }
+           if (b != null) {
+               var y = parseFloat(b.getAttribute("count"))
+               if (LowValue > y) { LowValue = y; using = b; }
+           }
+           if (c != null) {
+               var y = parseFloat(c.getAttribute("count"))
+               if (LowValue > y) { LowValue = y; using = c; }
+           }
+           if (d != null) {
+               var y = parseFloat(d.getAttribute("count"))
+               if (LowValue > y) { LowValue = y; using = d; }
+           }
+           if (e != null) {
+               var y = parseFloat(e.getAttribute("count"))
+               if (LowValue > y) { LowValue = y; using = e; }
+           }
+           if (f != null) {
+               var y = parseFloat(f.getAttribute("count"))
+               if (LowValue > y) { LowValue = y; using = f; }
+           }
+           if (g != null) {
+               var y = parseFloat(g.getAttribute("count"))
+               if (LowValue > y) { LowValue = y; using = g; }
+           }
+           if (using != null) {
+
+               var u = using.parentNode;
+               var child = u.firstChild;
+               var value = u.Value;
+
+               child = child.nextSibling;
+               child = child.nextSibling;
+               while (child) {
+                   child.style.backgroundColor = '#FFFABA';
+                   child.style.color = 'black';
+                   child = child.nextSibling;
+               }
+           }
+       }
+
+       function FindPassover() {
+           var a = document.getElementById("Sivan5");
+           var b = document.getElementById("Sivan7");
+           var c = document.getElementById("Sivan9");
+           var d = document.getElementById("Sivan11");
+           var g = document.getElementById("Nisan7");
+           var LowValue = 16;
+           var using = null;
+           var year = document.getElementById("AMYear").value;
+           if (a != null) {
+               var y = parseFloat(a.getAttribute("count"))
+               if (LowValue > y) { LowValue = y; using = a; }
+           }
+           if (b != null) {
+               var y = parseFloat(b.getAttribute("count"))
+               if (LowValue > y) { LowValue = y; using = b; }
+           }
+
+           if (c != null) {
+               var y = parseFloat(c.getAttribute("count"))
+               if (LowValue > y) { LowValue = y; using = c; }
+           }
+           if (d != null) {
+               var y = parseFloat(d.getAttribute("count"))
+               if (LowValue > y) { LowValue = y; using = d; }
+           }
+           if (g != null) {
+               var w = document.getElementById("Sivan4");
+               var y = parseFloat(w.getAttribute("count") - 1)
+               if (LowValue > y) { LowValue = y; using = w; }
+           }
+           if (using != null) {
+               var u = using.parentNode;
+               var child = u.firstChild;
+               child = child.nextSibling;
+               var GregorianDate = strip(child.innerHTML);
+               //              if (g != null) {
+               //                  GregorianDate -= 7;
+               //              }
+               var GregorianMonth = child.getAttribute("month");
+               var output = GregorianMonth + ' ' + (parseFloat(GregorianDate) + 1);
+               //document.getElementById("PentcostDate").innerHTML = output;
+               while (child) {
+                   child.style.backgroundColor = '#FFFABA';
+                   child.style.color = 'black';
+                   child = child.nextSibling;
+               }
+               FindFirstOfNisan();
+           }
+       }
+       function strip(html) {
+           var tmp = document.createElement("DIV");
+           tmp.innerHTML = html;
+           return tmp.textContent || tmp.innerText || "";
+         }
+
+       $(document).ready(function () {
+
+           // Get the button that opens the calendar
+           var generateButton = document.getElementById("CalcButton");
+
+           // When the user clicks on the button, open the PDF links
+           generateButton.onclick = function () {
+               $(".PDFButtons").show();
+           }
+       });
+
+
+    </script>
+
+
+
+
+	<div id="StyleButtons">
+	<input type="button" onclick="switch_style('Normal');" name="theme" value="Default" id="Normal">
+	<input type="button" onclick="switch_style('HighContrast');" name="theme" value="High Contrast" id="HighContrast">
+	</div>
+
+	<div class="generateOptions">
+	<p>Enter a year, pick the era, and Generate a Holy Day Calendar.</p>
+	
+	</div>
+
+
+<noscript>
+<style>
+div#calendarVideoContainer {position:relative;text-align:center; z-index: 99;background:none;}
+#containerBG {display:none;}       
+video#calVideo {height: auto !important;max-width: 85%;transform:none;left:auto;right:auto;}
+noscript div {background: #a00 none repeat scroll 0 0;border-radius: 10px;color: #fff;font-weight: 700;margin: 5px auto 15px;padding: 10px;text-align: center;}
+</style>
+</noscript>
+
+	
+
+<div class="generateOptionsInner">
+
+	<noscript><div>JavaScript is disabled on your browser. Without it, the calendar cannot generate</div></noscript>
+	<form id="EraForm" name="EraForm" method="NULL" action="#">
+		<a class="year" id="up" onclick="IncrementYear()">▲</a>
+		<input type="text" id="Year" placeholder="Enter a Year">
+		<a class="year" id="down" onclick="DecrementYear()">▼</a>
+		<span class="clear"></span>
+		<input type="hidden" id="Era" name="Era" value="">
+		<span class="buttonWrap">
+			<button type="button" class="adOff" id="EraAD" onclick="SetAD();">AD</button>
+			<button type="button" class="bcOff" id="EraBC" onclick="SetBC();">BC</button>
+		</span>
+		<span class="clear"></span>
+	</form>
+	<script type="text/javascript">
+		function ge(ElementName) { return document.getElementById(ElementName); }
+
+		var ButtonBC = ge("EraBC");
+		var ButtonAD = ge("EraAD");
+		var ValueEra = ge("Era");
+		var ValueYear = ge("Year");
+
+		function SetAD() {
+			ValueEra.value = "AD";
+			$(ButtonAD).removeClass("adOff").addClass("adOn");
+			$(ButtonBC).removeClass("bcOn").addClass("bcOff");
+		}
+
+		function SetBC() {
+			ValueEra.value = "BC";
+			$(ButtonAD).removeClass("adOn").addClass("adOff");
+			$(ButtonBC).removeClass("bcOff").addClass("bcOn");
+        }
+
+        function IncrementYear() {
+            if (ValueYear.value == null || ValueYear.value == "") {
+                ValueYear.value = 0;
+                SetAD();
+            }
+            if (ValueEra.value == "AD") {
+                ValueYear.value++;
+            }
+            else {
+                ValueYear.value--;
+            }
+            if (ValueYear.value <= 0) {
+                ValueYear.value = 1;
+                SetAD();
+            }
+            StartCalendar()
+        }
+        function DecrementYear() {
+            if (ValueYear.value == null || ValueYear.value == "") {
+                ValueYear.value = 0;
+                SetBC();
+            }
+            if (ValueEra.value == "AD") {
+                ValueYear.value--;
+            }
+            else {
+                ValueYear.value++;
+            }
+            if (ValueYear.value <= 0) {
+                ValueYear.value = 1;
+                SetBC();
+            }
+            StartCalendar()
+        }
+	</script>
+
+
+	<button id="CalcButton">Generate</button>
+</div>
+
+<div class="detailText">
+	<p>In order to find the Gregorian days for January-Mid March or Mid-April you have to go to the previous BC or AD year and scroll toward the bottom because the calendar is set to start the HCC year in mid-March to mid-April.</p>
+</div>
+
+<div id="md-maincontent"></div>
+
+    
+
+<div class="PDFButtons" style="display:none;">
+<div class="PDFTitle">
+<div class="Innertext"><strong>Chart 3:</strong> 7 Day Calendar Covering 6260 Years</div>
+</div>
+<a style="text-decoration:none; color:inherit;" href="/Content/files/Chart3-7DayCalendarCovering6260Years.pdf"> 
+</a><div class="PDFview"><a style="text-decoration:none; color:inherit;" href="/Content/files/Chart3-7DayCalendarCovering6260Years.pdf">
+<div class="viewtext">
+<div class="iconsizingview"><img src="/Content/files/PDfDownloadIcon.png" alt="" width="35" height="43"></div>
+VIEW HERE</div>
+</a></div>
+<a href="/Content/files/Chart3-7DayCalendarCovering6260Years.pdf" download="">
+<div class="PDFdownload">
+<div class="downloadtext">
+<div class="iconsizingdownload"><img src="/Content/files/PDfDownloadIcon.png" alt="" width="35" height="43"></div>
+DOWNLOAD HERE</div>
+</div>
+</a></div>
+
+<h3>Gregorian Calendar (The one you have on your desk or wall)</h3>
+<p><strong><img style="float: right; margin: 5px;" title="To convert between BC/AD (BCE/CE) and AM years, simply enter a date above" src="/Content/files/BiblicalCalendarConverter.jpg" alt="Christian Biblical Calendar Converter" width="250" height="184">Abbreviations: </strong>BC/AD (<em>Before Christ/Anno Domini</em>) or BCE/CE (<em>Before Common Era/After Common Era</em>)</p>
+<p>The <strong>Gregorian calendar</strong> is sometimes called the <strong>Christian calendar </strong>or <strong>Western calendar</strong>. Some calendar scholars reference the <strong>Julian calendar</strong>, which is similar but lacks modern leap year corrections.</p>
+<h3>Hebrew Calendar (The one in the bible)</h3>
+<p><strong>Abbreviations:</strong> AM (<em>Anno Mundi</em> – Latin: “<em>in the year of the world</em>”, Hebrew: “<em>from the creation of the world</em>”)</p>
+<p>The <strong>Hebrew calendar</strong> is sometimes called the <strong>Biblical calendar</strong> or <strong>Jewish calendar</strong>, which draws from the Old Testament and calls creation the start of year 1. Converting the calendar is sometimes tricky because the first day of the year 1 is not January 1st.</p>
+<h2>Ancient Hebrew Calendar Converter</h2>
+<p>The above tool allows you to enter either the Gregorian calendar date (like 2015, 2016 or 2017) or the Hebrew calendar date and switch between the two.</p>
+<p><img style="margin: 5px; float: left;" title="Convert between the Gregorian and Hebrew calendar using the tool above." src="/Content/files/HebrewCalendarConverter.jpg" alt="Hebrew Calendar Converter" width="250" height="189"></p>
+
+
+	<div class="clear"></div>
+</div>
+
+
+</body>
+</html>
