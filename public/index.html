@@ -9,32 +9,39 @@
 </head>
 <body>
 	
-	<div class="container">
-		<h1>Welcome</h1>
-		<div class="col-sm-6">
-				<h3>Get a specific year</h3>
+	<div class="container-fluid">
+		
+		<div class="col-sm-12">
 				
+				<div class="row">
+					<div class="col-sm-4">
 				<label>Year</label>
 				<input type="text" id="year" name="year" class="form-control">
+			</div>
+			<div class="col-sm-4">
 				<label>Era</label>
 				<select class="form-control" name="era" id="era">
 					<option value="AD">AD</option>
 					<option value="BC">BC</option>
 				</select>
-				<br>
+			</div>
+			<div class="col-sm-4">
+				<label>Generate</label><br />
 				<a class="btn btn-primary" href="javascript:getYear()" data-external="true">
-					Download
+					Submit
 				</a>
+			</div>
+			</div>
 				
 			</div>
-			<iframe id="loadCal"></iframe>
+			<iframe id="loadCal" frameborder="0" style="width:100%; height: 600px; border: 0"></iframe>
 	</div>
 <script src="bootstrap/js/jquery.js"></script>
 <script type="text/javascript">
 	function getYear() {
 
 		var res = $("#era").val() + $("#year").val();
-		alert(res);
+		//alert(res);
 		var url = "../output/"+res+".html";
 		$("#loadCal").attr("src", url);
 		/*

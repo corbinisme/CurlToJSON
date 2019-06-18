@@ -50,9 +50,9 @@ function downloadYear(){
 
   		listCounter++;
   		// just setting to the first two for now
-  		if(listCounter==1){
+  		//if(listCounter==1){
   			ajaxDownload();
-  		}
+  		//}
   	});
 
 	
