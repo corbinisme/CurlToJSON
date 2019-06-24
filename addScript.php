@@ -18,7 +18,7 @@ $myDirectory = opendir($where);
   // close directory
   closedir($myDirectory);
 
-$limit = 2;
+$limit = 1;
   $counter = 0;
 
   foreach($dirArray as $fi){
@@ -51,7 +51,10 @@ $limit = 2;
 			// file put contents
 		}
 
-		file_put_contents($fi, $output);
+		$output = str_replace("<div id=\"pageWrap\">", "<div id=\"pageWrap\"><div id=\"CalendarPage\">", $output);
+		$output = str_replace("</body>", "</div></body>", $output);
+
+		file_put_contents('./output/' . $fi, $output);
 
 		
 			
