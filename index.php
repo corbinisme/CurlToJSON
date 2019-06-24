@@ -150,11 +150,12 @@ $htmlhead = '<html>
 	<link type="text/css" rel="stylesheet" href="../src/generator_files/site.css">
 	<link type="text/css" rel="stylesheet" href="../src/generator_files/GS.css">
 	<link href="../src/generator_files/css" rel="stylesheet" type="text/css">
+
 </head>
 <body>
 	<div id="pageWrap">
-	<div id="md-maincontent">';
-	$htmlEnd = '</div>
+	<div id="md-maincontent"><div id="CalendarPage">';
+	$htmlEnd = '</div></div>
 </div>
 </body>
 </html>';
@@ -180,6 +181,7 @@ $htmlhead = '<html>
 	fwrite($fw, $htmlOutput);
 	fclose($fw);
 
+	echo $htmlOutput;
 
 	echo 'writing output/' .$era . $year . '.json | ';
 	echo 'writing output/'. $era . $year .'.html<br />';
