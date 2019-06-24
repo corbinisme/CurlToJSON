@@ -52,6 +52,23 @@ $myDirectory = opendir($where);
 					   	$url = "https://www.biblicalcalendarproof.com".$item->getAttribute('href');
 					   	echo $url;
 
+					   	// Set the url
+					   	/*
+						curl_setopt($handle, CURLOPT_URL, $url);
+						// Set the result output to be a string.
+						curl_setopt($handle, CURLOPT_RETURNTRANSFER, true);
+
+
+						//curl_setopt($ch,CURLOPT_SSL_VERIFYPEER, false)
+						$newoutput = curl_exec($handle);
+						 
+						curl_close($handle);
+
+						$fw = fopen('./Timeline/'.$item->getAttribute('href') .'.html', 'w');
+						fwrite($fw, $newoutput);
+						fclose($fw);
+						*/
+
 					   }
 					} else {
 						//echo "<td>no</td>"
