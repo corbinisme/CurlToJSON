@@ -1,8 +1,13 @@
 function ge(ElementName) { return document.getElementById(ElementName); }
-
+function FindPassover(){
+    
+}
 
 function StartCalendar() {
-    alert(ValueYear + ValueEra);
+    //alert(ValueYear + ValueEra);
+    var newloc =  ValueEra + ValueYear + ".html";
+    alert(newloc);
+    window.location.href = newloc;
 }
         var loc = window.location.href;
 		var ButtonBC = ge("EraBC");

@@ -18,7 +18,7 @@ $myDirectory = opendir($where);
   // close directory
   closedir($myDirectory);
 
-$limit = 1;
+$limit = 9999;
   $counter = 0;
 
   foreach($dirArray as $fi){
