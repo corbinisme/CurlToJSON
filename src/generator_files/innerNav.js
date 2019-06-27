@@ -6,7 +6,7 @@ function FindPassover(){
 function StartCalendar() {
     //alert(ValueYear + ValueEra);
     var newloc =  ValueEra + ValueYear + ".html";
-    alert(newloc);
+    //alert(newloc);
     window.location.href = newloc;
 }
         var loc = window.location.href;
