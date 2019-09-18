@@ -110,6 +110,8 @@ function downloadYear(){
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
   </button>
+
+
   <!--
   <div class="collapse navbar-collapse" id="navbarNav">
     <ul class="navbar-nav">
@@ -131,7 +133,9 @@ function downloadYear(){
 </nav>
 
 </header>
+<div class="alert alert-danger"><h1>DO NOT USE THIS CARELESSLY</h1></div>
 <br />
+<a href="import.php" class="btn btn-primary">Import instead</a>
 <?php 
 
 

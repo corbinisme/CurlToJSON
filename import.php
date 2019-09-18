@@ -146,10 +146,17 @@ function getCalendarByYear($year, $era){
 	$start = strpos($página_inicio, "\"pageWrap");
 
 	$subbed = substr($página_inicio, $start+11, -26);
-	$sql = "INSERT INTO calendarJson (GC_Year, GC_Era, output) VALUES ('$year}', '{$era}', '--big output--')";
+	$sql = "INSERT INTO calendarJson (GC_Year, GC_Era, output) VALUES ('{$year}', '{$era}', '--big output--')";
 	echo $sql;
-	echo "<textarea class='form-control'>" . $subbed . "</textarea>";
+	echo "<textarea class='form-control'>" . addslashes($subbed) . "</textarea>";
 	//echo $subbed;
+	$csvVal = addslashes($subbed);
+	$csvVal = str_replace("\r\n","",$csvVal);
+	$allRow = "\n{$year},{$era},{$csvVal}";
+	$fp = fopen('alljson.csv', 'a');
+	fwrite($fp, $allRow);
+	fclose($fp);
+
 	
 	
 
