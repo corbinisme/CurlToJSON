@@ -143,10 +143,10 @@ function getCalendarByYear($year, $era){
 	echo "<br />Make NEW TABLE <br />";
 	$página_inicio = file_get_contents($url);
 	
-	$start = strpos($página_inicio, "\"CalendarPage");
+	$start = strpos($página_inicio, "\"pageWrap");
 
-	$subbed = substr($página_inicio, $start+15, -28);
-	$sql = "INSERT INTO calendarJson (GC_Year, GC_Era, output) VALUES ('{year}', '{era}', '--big output--')";
+	$subbed = substr($página_inicio, $start+11, -26);
+	$sql = "INSERT INTO calendarJson (GC_Year, GC_Era, output) VALUES ('$year}', '{$era}', '--big output--')";
 	echo $sql;
 	echo "<textarea class='form-control'>" . $subbed . "</textarea>";
 	//echo $subbed;
