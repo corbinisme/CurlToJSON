@@ -1,3 +1,16 @@
+<?php 
+error_reporting(E_ALL);
+ini_set('display_errors', 1);
+    $url = $_SERVER['HTTP_HOST'] . $_SERVER['REQUEST_URI'];
+    $pos = strpos($url, "wwwmi3");
+    $pos2 = strpos($url, "proof");
+    if($pos===false && $pos2===false){
+         $env = "local";
+    } else {
+         $env = "remote";
+    }
+?>
+<?php include "conn.php";?>
 <html>
 <head>
 	<link href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" 
@@ -135,24 +148,26 @@ function downloadYear(){
 <?php 
 
 
-error_reporting(E_ALL);
-ini_set('display_errors', 1);
+
 function getCalendarByYear($year, $era){
-	$url = "./output/{$era}{$year}.html";
+	$url = "../generator/calendar/download/{$era}{$year}.html";
 	echo $url;
 	echo "<br />Make NEW TABLE <br />";
 	$página_inicio = file_get_contents($url);
 	
 	$start = strpos($página_inicio, "\"pageWrap");
 
-	$subbed = substr($página_inicio, $start+11, -26);
-	$sql = "INSERT INTO calendarJson (GC_Year, GC_Era, output) VALUES ('{$year}', '{$era}', '--big output--')";
-	echo $sql;
-	echo "<textarea class='form-control'>" . addslashes($subbed) . "</textarea>";
+	$subbed = substr($página_inicio, $start+11, -28);
+	$sql = "INSERT INTO calendarJson (GC_Year, GC_Era, JSON) VALUES ('{$year}', '{$era}', '" . addslashes($subbed) . "')";
+	//echo $sql;
+
+	//mysqli_query($con,$sql);
+	
+	echo "<textarea class='form-control'>" . $subbed . "</textarea>";
 	//echo $subbed;
 	$csvVal = addslashes($subbed);
 	$csvVal = str_replace("\r\n","",$csvVal);
-	$allRow = "\n{$year},{$era},{$csvVal}";
+	$allRow = "\n{$era}{$year},{$year},{$era},{$csvVal}";
 	$fp = fopen('alljson.csv', 'a');
 	fwrite($fp, $allRow);
 	fclose($fp);
@@ -278,7 +293,7 @@ if(isset($_REQUEST['year']) && isset($_REQUEST['era'])) {
 			$from = $baseSplit[0];
 			$to = $baseSplit[1];
 
-			echo "<li><a href='index.php?from={$from}&to={$to}'>". $years ."</a></li>";
+			echo "<li><a href='import.php?from={$from}&to={$to}'>". $years ."</a></li>";
 		}
 		echo "</ul>";
 
@@ -286,7 +301,7 @@ if(isset($_REQUEST['year']) && isset($_REQUEST['era'])) {
 			</div>
 			<div class="col-sm-6">
 				<h1>Get a specific year</h1>
-				<form action="index.php" method="GET">
+				<form action="import.php" method="GET">
 				<label>Year</label>
 				<input type="text" id="year" name="year"  class="form-control"/>
 				<label>Era</label>
