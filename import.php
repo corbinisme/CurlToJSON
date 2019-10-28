@@ -150,14 +150,14 @@ function downloadYear(){
 
 
 function getCalendarByYear($year, $era){
-	$url = "../generator/calendar/download/{$era}{$year}.html";
+	$url = "./output/{$era}{$year}.html";
 	echo $url;
 	echo "<br />Make NEW TABLE <br />";
 	$página_inicio = file_get_contents($url);
 	
-	$start = strpos($página_inicio, "\"pageWrap");
+	$start = strpos($página_inicio, "<body>");
 
-	$subbed = substr($página_inicio, $start+11, -28);
+	$subbed = substr($página_inicio, $start+6, -15);
 	$sql = "INSERT INTO calendarJson (GC_Year, GC_Era, JSON) VALUES ('{$year}', '{$era}', '" . addslashes($subbed) . "')";
 	//echo $sql;
 
