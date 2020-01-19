@@ -1,8 +1,8 @@
 ﻿a, img { border: none; outline: none; }
 .clear { clear: both; }
 
-.container .Cell.SC.Month.SabbathCountEnd {background:#FFF; font-size:15px; text-align:center; color:#000; -webkit-box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.75); -moz-box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.75); box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.75);}
-.container .Cell.SC.Month.SabbathCount    {background:#FFF; font-size:15px; text-align:center; color:#000; -webkit-box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.75); -moz-box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.75); box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.75);}
+.container .Cell.SC.Month.SabbathCountEnd {background:#FFF; font-size:11px; text-align:center; color:#000; -webkit-box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.75); -moz-box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.75); box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.75);}
+.container .Cell.SC.Month.SabbathCount    {background:#FFF; font-size:11px; text-align:center; color:#000; -webkit-box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.75); -moz-box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.75); box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.75);}
 
 .images a {transition:all 0.2s ease; color:#FFF !important; }
 .images a:hover {color:#446dad !important; transition:all 0.2s ease;}
@@ -52,7 +52,7 @@ body a.eventReturn:active {box-shadow:none;}
 .timelineSheet {width:100%; display:block; clear:both;  max-width:320px; margin:0 auto; float:none;}
 }
 
-#NewCalendarContainer {background:#3a82de; margin-bottom:10px; float:left; width:150%; margin-left:-25%; border:1px solid #000; -webkit-box-shadow: 4px 4px 5px 0px rgba(0,0,0,0.25); -moz-box-shadow: 4px 4px 5px 0px rgba(0,0,0,0.25); box-shadow: 4px 4px 5px 0px rgba(0,0,0,0.25);}
+#NewCalendarContainer {background:#3a82de; margin-bottom:10px; float:left; width:100%; margin: auto; border:1px solid #000; -webkit-box-shadow: 4px 4px 5px 0px rgba(0,0,0,0.25); -moz-box-shadow: 4px 4px 5px 0px rgba(0,0,0,0.25); box-shadow: 4px 4px 5px 0px rgba(0,0,0,0.25);}
 
 /* New Time-line Styling
 ============================================ */
@@ -661,7 +661,7 @@ table tr td .linkBoxes { vertical-align: middle; height: 100px; padding: 0; bord
 
 .container .Cell.HCC { background: #a50000; }
 .container .Cell.HCC.first { /*background: url(/Content/images/calendar/numberBGHebrew.png) top left no-repeat #a50000;*/ }
-.container .Cell.HCC.Month { background: transparent; color: #a50000; text-align: left; text-shadow: none; }
+.container .Cell.HCC.Month { background: transparent; color: #fff; text-align: left; text-shadow: 0px 0px 2px #000; }
 .container .Cell.HCC.Month.first { text-align: center; }
 .container .Cell.HCC.Month span { font-size: 18px; }
 

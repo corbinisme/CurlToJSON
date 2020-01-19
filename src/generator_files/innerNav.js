@@ -14,7 +14,7 @@ ValueYear = parseInt(ValueYearString);
 
 function ge(ElementName) { return document.getElementById(ElementName); }
 function FindFirstOfNisan() {
-    console.log("Nisan");
+    //console.log("Nisan");
            var a = document.getElementById("Nisan1");
            var b = document.getElementById("Nisan2");
            var c = document.getElementById("Nisan3");
