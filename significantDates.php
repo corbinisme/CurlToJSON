@@ -21,23 +21,34 @@
   integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44="
   crossorigin="anonymous"></script>
 <script>
+var max = $("table a").size();
+var counter = 0;
+
+	
+
 $(document).ready(function(){
 
 
 	$("table a").click(function(e){
 		e.preventDefault();
+		var $node = $(this);
 		var linky = $(this).attr("href");
 		$.ajax({
 			url: linky,
 			success: function(data){
 				var thisLink = $(data).find(".sdHeadline a").attr("href");
 				thisLink = "https://www.biblicalcalendarproof.com" + thisLink;
-				window.open(thisLink)
+				//window.open(thisLink);
+				$node.closest("tr").append("<td>" + thisLink  +"</td>");
 			}, 
 			error: function(e){
 
 			}
 		});
+	});
+
+	$("table a").each(function(){
+		$(this).trigger("click");
 	});
 });
 </script>
@@ -189,7 +200,7 @@ $dates = array(
 "BC4",
 "AD30",
 "AD70");
-echo "<table><tr><th>Era</th><th>Year</th><th>AM</th></tr>";
+echo "<table><tr><th>Era</th><th>Year</th><th>AM</th><th>Link</th></tr>";
 foreach($dates as $date){
 	//echo $date;
 	$era = substr($date, 0,2);
