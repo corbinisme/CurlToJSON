@@ -74,7 +74,7 @@ function ajaxDownload(){
 <h1>Add to DB</h1>
 <?php
 
-function getCalendarByYear($file){
+function getCalendarByYear($file, $conn){
  
 
   $GC_Era = substr($file, 0, 2);
@@ -98,20 +98,23 @@ function getCalendarByYear($file){
   if($newnewnewoutput == ""){
     $newnewnewoutput = "NONE";
   }
+
+  $sqlToRun = "INSERT INTO generator (GC_Year, GC_Era, AM_Year, html)VALUES ($GC_Year,'$GC_Era',$am, '" . htmlentities($newnewnewoutput) . "')";
   echo "<tr>";
   echo "<td>" . $GC_Year . "</td>";
   echo "<td>" . $GC_Era . "</td>";
   echo "<td>" . $am . "</td>";
   echo" <td><textarea class='form-control'>" . $newnewnewoutput ."</textarea></td>";
+  echo "<td>";
+  echo "<pre>$sqlToRun</pre></td>";
   echo "</tr>";
 
-  $sql = "|" .$GC_Year. "|".$GC_Era. "|". $am . "|" .  $newnewnewoutput . "\n";
+  $res = mysqli_query($conn,$sqlToRun);
+  //$t = $conn->query("DESCRIBE generator");
+  //$sql = "|" .$GC_Year. "|".$GC_Era. "|". $am . "|" .  $newnewnewoutput . "\n";
 
-  $fichero = 'sql/htmlgenerator.csv';
-  file_put_contents($fichero, $sql, FILE_APPEND | LOCK_EX);
-  //$fw = fopen('sql/htmlgenerator.csv', 'w');
-  //fwrite($fw, $sql);
-  //fclose($fw);
+  //$fichero = 'sql/htmlgenerator.csv';
+  //file_put_contents($fichero, $sql, FILE_APPEND | LOCK_EX);
 
 }
 
@@ -149,6 +152,7 @@ if(isset($_REQUEST["from"]) && isset($_REQUEST["to"])){
     <th>GC Era</th>
     <th>AM Year</th>
     <th>Html</th>
+    <th>SQL</th>
   </tr>
   <?php
     for($k=$fromYear; $k<$toYear;$k++){
@@ -169,7 +173,7 @@ if(isset($_REQUEST["from"]) && isset($_REQUEST["to"])){
       //echo $thisYear . " ".  $thisEra;
       //echo "</div></div>";
       $file = $thisEra . $thisYear . ".html";
-      getCalendarByYear($file);
+      getCalendarByYear($file, $conn);
     }
     ?>
 
@@ -252,6 +256,11 @@ $maxCounter = 0;
     //echo "</pre>";
 
    echo "<a href='javascript:downloadAll();' class='btn btn-primary'>Download All (long process)</a><hr />";
+
+   ?>
+   <div class="row">
+    <div class="col-sm-6">
+      <?php
     echo "<ul class='linksbyfifty hidden'>";
     foreach($full as $years){
       $baseSplit = explode("-", $years);
@@ -261,8 +270,35 @@ $maxCounter = 0;
       echo "<li><a href='addToDB.php?from={$from}&to={$to}'>". $years ."</a></li>";
     }
     echo "</ul>";
-    
 
+
+    ?>
+  </div>
+  <div class="col-sm-6">
+    <?php
+    /*
+$query = 'INSERT INTO generator (field, field, field)VALUES';
+
+      if(false !== ($handle = fopen('sql/htmlgenerator.csv', 'r'))){
+          while(false !== ($line = fgetcsv($handle, 0, '|'))){
+              $query .= sprintf(
+                  "('&#37;s'|'%s'|'%s'),",
+                  mysqli_real_escape_string($conn, $line[0]),
+                  mysqli_real_escape_string($conn, $line[1]),
+                  mysqli_real_escape_string($conn, $line[2])
+              );
+              
+          }
+      }
+
+      $query = rtrim($query, ',');
+      echo $query;
+      */
+    ?>
+  </div>
+</div>
+    
+<?php
 }
 ?>
 </div>
