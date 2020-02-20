@@ -79,7 +79,7 @@ function getCalendarByYear($file, $conn){
 
   $GC_Era = substr($file, 0, 2);
   $GC_Year = substr($file, 2, -5);
-  $url = "../generator/calendar/download/" . $file;
+  $url = "../generator/output/" . $file;
   $output = file_get_contents($url);
   $start = strpos($output, "CalendarPage") + 14;
   $newoutput= substr($output, $start, -36);
