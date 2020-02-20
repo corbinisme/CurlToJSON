@@ -109,7 +109,7 @@ function getCalendarByYear($file, $conn){
   echo "<pre>$sqlToRun</pre></td>";
   echo "</tr>";
 
-  $res = mysqli_query($conn,$sqlToRun);
+  //$res = mysqli_query($conn,$sqlToRun);
   //$t = $conn->query("DESCRIBE generator");
   //$sql = "|" .$GC_Year. "|".$GC_Era. "|". $am . "|" .  $newnewnewoutput . "\n";
 
@@ -155,7 +155,7 @@ if(isset($_REQUEST["from"]) && isset($_REQUEST["to"])){
     <th>SQL</th>
   </tr>
   <?php
-    for($k=$fromYear; $k<$toYear;$k++){
+    for($k=$fromYear; $k<=$toYear;$k++){
       $thisEra = "BC";
       $thisYear = $k;
 
